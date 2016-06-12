@@ -49,6 +49,8 @@ public class ARProgrammaticallyActivity extends CraftARActivity implements Craft
 
 	private final String TAG = "ARProgrammaticallyActivity";
 
+	private String current = "";
+
 	CraftARSDK mCraftARSDK;
 	CraftARTracking mTracking;
 	CraftARCloudRecognition mCloudIR;
@@ -63,8 +65,10 @@ public class ARProgrammaticallyActivity extends CraftARActivity implements Craft
 		stickersAdapter = new StickersAdapter(new StickersAdapter.OnItemClickListener() {
 			@Override
 			public void onClick(Sticker sticker) {
-				Uri uri = Uri.parse("android.resource://your.package.here/drawable/a1.png");
-
+				current = sticker.getUri().toString();
+//				if (!mCraftARSDK.isFinding()) {
+//					mCraftARSDK.startFinder();
+//				}
 			}
 		});
 
@@ -85,7 +89,7 @@ public class ARProgrammaticallyActivity extends CraftARActivity implements Craft
 	}
 
 	private String getPath() {
-		return getApplicationContext().getExternalFilesDir(null) + "/" + "default_1.png";
+		return getApplicationContext().getExternalFilesDir(null) + "/" + current;
 	}
 
 	@Override
