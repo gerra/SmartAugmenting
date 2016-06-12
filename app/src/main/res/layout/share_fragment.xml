@@ -14,6 +14,7 @@
         style="@style/AppTheme.SubmitButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Поделиться"/>
+        android:text="Поделиться"
+        android:id="@+id/buttonShare"/>
 
 </LinearLayout>

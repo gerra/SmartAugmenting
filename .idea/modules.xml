@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SuperPuperMegaApp.iml" filepath="$PROJECT_DIR$/SuperPuperMegaApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SmartAugmenting.iml" filepath="$PROJECT_DIR$/SmartAugmenting.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
