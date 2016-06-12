@@ -20,7 +20,7 @@ public class StickerViewHolder extends RecyclerView.ViewHolder {
         imageView = (ImageView) itemView.findViewById(R.id.img);
     }
 
-    public void bindItem(Sticker sticker) {
+    public void bindItem(final Sticker sticker, final StickersAdapter.OnItemClickListener listener) {
         if (sticker.isFromAssets()) {
             try {
                 InputStream inputStream = itemView.getContext().getResources().getAssets().open(sticker.getUri().toString());
@@ -30,5 +30,11 @@ public class StickerViewHolder extends RecyclerView.ViewHolder {
                 e.printStackTrace();
             }
         }
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onClick(sticker);
+            }
+        });
     }
 }

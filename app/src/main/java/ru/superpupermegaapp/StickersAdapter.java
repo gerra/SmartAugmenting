@@ -13,10 +13,16 @@ import java.util.List;
  */
 public class StickersAdapter extends RecyclerView.Adapter<StickerViewHolder> {
 
-    private List<Sticker> stickers;
+    public interface OnItemClickListener {
+        void onClick(Sticker sticker);
+    }
 
-    public StickersAdapter() {
+    private List<Sticker> stickers;
+    private OnItemClickListener listener;
+
+    public StickersAdapter(OnItemClickListener listener) {
         stickers = new ArrayList<>();
+        this.listener = listener;
     }
 
     @Override
@@ -28,7 +34,7 @@ public class StickersAdapter extends RecyclerView.Adapter<StickerViewHolder> {
 
     @Override
     public void onBindViewHolder(StickerViewHolder holder, int position) {
-        holder.bindItem(stickers.get(position));
+        holder.bindItem(stickers.get(position), listener);
     }
 
     @Override

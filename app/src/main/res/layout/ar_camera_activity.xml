@@ -5,12 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.craftar.CraftARCameraView
-        android:id="@+id/camera_preview"
+    <RelativeLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
-    </com.craftar.CraftARCameraView>
+        <com.craftar.CraftARCameraView
+            android:id="@+id/camera_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" >
+        </com.craftar.CraftARCameraView>
+
+    </RelativeLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/stickersList"

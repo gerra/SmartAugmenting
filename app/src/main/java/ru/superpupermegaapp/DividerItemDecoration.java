@@ -77,6 +77,23 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
             mDivider.setBounds(left, top, right, bottom);
             mDivider.draw(c);
         }
+
+//        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) parent.getLayoutParams();
+//        mDivider.setBounds(
+//                parent.getLeft() + params.leftMargin,
+//                top - mDivider.getIntrinsicHeight(),
+//                parent.getRight() - params.rightMargin,
+//                top
+//        );
+//        mDivider.draw(c);
+//
+//        mDivider.setBounds(
+//                parent.getLeft() + params.leftMargin,
+//                bottom,
+//                parent.getRight() - params.rightMargin,
+//                bottom + mDivider.getIntrinsicHeight()
+//        );
+//        mDivider.draw(c);
     }
 
 

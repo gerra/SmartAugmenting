@@ -39,7 +39,7 @@ public class TutorialFragment extends Fragment {
             @Override
             public void onClick(View v) {
 //                ((MainActivity) getActivity()).openFragment(CameraFragment.newInstance(), false);
-                Intent intent = new Intent(getContext(), CameraActivity.class);
+                Intent intent = new Intent(getContext(), ARProgrammaticallyActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(intent);
             }
